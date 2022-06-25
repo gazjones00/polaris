@@ -3,7 +3,11 @@ import "prismjs/themes/prism-tomorrow.css";
 import Prism from "prismjs";
 import React from "react";
 import rehypeRaw from "rehype-raw";
+import remarkGfm from "remark-gfm";
+import classNames from "classnames";
 import { slugify } from "../../utils/various";
+
+import styles from "./Markdown.module.scss";
 
 interface Props {
   text: string;
@@ -13,6 +17,7 @@ interface Props {
 function Markdown({ text, skipH1 }: Props) {
   return (
     <ReactMarkdown
+      remarkPlugins={[[remarkGfm, { tablePipeAlign: true }]]}
       rehypePlugins={[rehypeRaw]}
       components={{
         h1: ({ children }) => {
@@ -34,6 +39,7 @@ function Markdown({ text, skipH1 }: Props) {
         },
         code: ({ node, inline, className, children, ...props }) => (
           <span
+            className={classNames(styles.Code, inline && styles.inline)}
             dangerouslySetInnerHTML={{
               __html: Prism.highlight(
                 String(children),
@@ -45,8 +51,10 @@ function Markdown({ text, skipH1 }: Props) {
         ),
         table: ({ children }) => {
           return (
-            <div className="table-wrapper">
-              <table>{children}</table>
+            <div className={styles.QuickStartCard}>
+              <div className={styles.QuickStartTable__Wrapper}>
+                <table className={styles.QuickStartTable}>{children}</table>
+              </div>
             </div>
           );
         },

@@ -99,3 +99,20 @@ export type Status = {
   value: string;
   message: string;
 };
+
+export interface QuickGuideRow {
+  question: string;
+  answer: string;
+}
+
+export interface QuickGuide {
+  title: string;
+  rows: [
+    openSource: QuickGuideRow,
+    who: QuickGuideRow,
+    when: QuickGuideRow,
+    where: QuickGuideRow,
+    what: QuickGuideRow,
+    how: QuickGuideRow
+  ];
+}

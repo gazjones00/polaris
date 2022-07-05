@@ -1,5 +1,10 @@
 # Changelog
 
+## 4.24.0
+
+- New icon `TemplateMinor` ([#6514](https://github.com/Shopify/polaris/pull/6514))
+- Updated metadata `TemplateMajor`
+
 ## 4.23.0
 
 ### Minor Changes

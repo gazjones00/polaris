@@ -29,12 +29,15 @@ quickGuides:
       - where:
         question: Where do I contribute?
         answer: Code and documentation for prop changes can be contributed in the <a href="https://github.com/Shopify/polaris">Shopify/polaris</a> GitHub repo. If the prop is UI-related, updates should also be contributed in Figma.
+      - relatedIssues:
+        question: Where should I search for related issues or topics?
+        answer: Search for related issues, pull requests, and discussions in the <a href="https://github.com/Shopify/polaris">Shopify/polaris</a> GitHub repo.
       - what:
         question: What resources will my contribution impact?
         answer: Along with impacting the <code>@shopify/polaris</code> npm package and this documentation site, prop changes may also impact the <a href="/contributing/figma-ui-kit">Figma UI Kit</a>.
       - how:
         question: How can I get started?
-        answer: Submit a <a href="https://github.com/Shopify/polaris/issues/new?assignees=&labels=%F0%9F%90%9BBug&template=ISSUE.md">bug report</a>, assign yourself to an existing bug report, or <a href="/contributing/shipping-your-contribution">open a pull request</a>.
+        answer: Submit a <a href="https://github.com/Shopify/polaris/issues/new?assignees=&labels=%F0%9F%90%9BBug&template=ISSUE.md">bug report</a>, assign yourself to an existing bug report, or <a href="/contributing/shipping-your-contribution#making-your-first-pr">open a pull request</a>.
   - title: Fixing a bug
     queryParam: fixing-a-bug
     rows:
@@ -53,12 +56,15 @@ quickGuides:
       - where:
         question: Where do I contribute?
         answer: Bug fixes are contributed in the <a href="https://github.com/Shopify/polaris">Shopify/polaris</a> GitHub repo. Component code can be found in the <code>polaris-react/src</code> directory.
+      - relatedIssues:
+        question: Where should I search for related issues or topics?
+        answer: Search for related issues, pull requests, and discussions in the <a href="https://github.com/Shopify/polaris">Shopify/polaris/issues</a> GitHub repo.
       - what:
         question: What resources will my contribution impact?
         answer: The <code>@shopify/polaris</code> npm package and this documentation site.
       - how:
         question: How can I get started?
-        answer: Submit or assign yourself to an existing <a href="https://github.com/Shopify/polaris/issues/new?assignees=&labels=Feature+request&template=FEATURE_REQUEST.md">feature proposal</a> or <a href="/contributing/shipping-your-contribution">open a pull request</a>.
+        answer: Submit or assign yourself to an existing <a href="https://github.com/Shopify/polaris/issues/new?assignees=&labels=%F0%9F%90%9BBug&template=ISSUE.md">feature proposal</a> or <a href="/contributing/shipping-your-contribution#making-your-first-pr">open a pull request</a>.
   - title: Adding new pattern
     queryParam: adding-a-new-pattern
     rows:
@@ -77,6 +83,9 @@ quickGuides:
       - where:
         question: Where do I contribute?
         answer: New or updated components and patterns are contributed in Figma as well as in the <a href="https://github.com/Shopify/polaris">Shopify/polaris</a> GitHub repo. Component code and documentation can be found in the <code>polaris-react/src</code> directory.
+      - relatedIssues:
+        question: Where should I search for related issues or topics?
+        answer: Along with searching for related issues, pull requests, and discussions in the <a href="https://github.com/Shopify/polaris">Shopify/polaris</a> GitHub repo, you should search in Shopify's internal wiki and Google Drive.
       - what:
         question: What resources will my contribution impact?
         answer: Along with impacting the <code>@shopify/polaris</code> npm package and this documentation site, new or updated patterns should also be contributed to the <a href="/contributing/figma-ui-kit">Figma UI Kit</a>.
@@ -87,7 +96,7 @@ quickGuides:
 
 # Contributing to Polaris React
 
-Anyone is welcome to contribute to Polaris React. There are several types of component contributions, but they typically fall under three categories: bug fix, enhancement, or new pattern.
+Anyone is welcome to contribute to Polaris React components. There are several types of component contributions, but they typically fall under three categories: bug fix, enhancement, or new pattern.
 
 Bug fixes can be as simple as removing a typo, or as complex as refactoring a component to address a performance or accessibility issue. Enhancements usually add to or update the props of an existing component to extend its functionality or presentation. New patterns can be contributed by simply adding a new example to an existing component's documentation, or by adding new components or utilities. Often component contributions are a mix of these.
 
@@ -104,7 +113,7 @@ Bug fixes can be as simple as removing a typo, or as complex as refactoring a co
 
 Start planning your contribution as early as possible to account for the scope in your timeline. To get help with the strategy for your contribution early on, start a [discussion](https://github.com/Shopify/polaris/discussions/new) with the Polaris community. If you have a smaller question, reach out in #polaris if you work at Shopify, or the [Shopify Partners Slack](http://shopifypartners.slack.com) if you're an open source contributor. Once you've decided on the best way to solve the problem, submit a [feature proposal](https://github.com/Shopify/polaris/issues/new?assignees=&labels=Feature+request&template=FEATURE_REQUEST.md) or [bug report](https://github.com/Shopify/polaris/issues/new?assignees=&labels=%F0%9F%90%9BBug&template=ISSUE.md) issue. Then contribute the change by shipping a pull request.
 
-Often the changes you make to a component's code impact the [documentation](/contributing/documentation) and [Figma UI Kit](/contributing/figma-ui-kit). If you work at Shopify, component contributions should be a team effort across disciplines. If you're an open source contributor, we'll work with you to update the Figma UI Kit once you [create an issue](https://github.com/Shopify/polaris/issues/new/choose) or open a pull request in the `Shopify/polaris` repo.
+Often the changes you make to a component's code impact the [documentation](/contributing/documentation) and [Figma UI Kit](/contributing/figma-ui-kit). If you work at Shopify, component contributions should be a team effort across disciplines. If you're an open source contributor, we'll work with you to update the Figma UI Kit once you [create an issue](https://github.com/Shopify/polaris/issues/new/choose) or [open a pull request](/contributing/shipping-your-contribution#making-your-first-pr) in the `Shopify/polaris` repo.
 
 ### Update props
 
@@ -120,7 +129,7 @@ Components should be performant, accessible, and maintainable. When contributing
 - Address a pain point in the merchant experience
 - Reduce complexity of the source code
 
-If a component isn't flexible enough to meet your project's requirements, or you're unsure whether a component is right for your use case, submit an [issue](https://github.com/Shopify/polaris/issues/new?assignees=&labels=Feature+request&template=FEATURE_REQUEST.md) or open a pull request outlining the problem and the approach you're thinking about. We're happy to collaborate to find a solution.
+If a component isn't flexible enough to meet your project's requirements, or you're unsure whether a component is right for your use case, submit an [issue](https://github.com/Shopify/polaris/issues/new?assignees=&labels=Feature+request&template=FEATURE_REQUEST.md) or [open a pull request](/contributing/shipping-your-contribution#making-your-first-pr) outlining the problem and the approach you're thinking about. We're happy to collaborate to find a solution.
 
 #### How to contribute
 

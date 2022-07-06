@@ -1,5 +1,13 @@
 # Changelog
 
+## 4.24.0
+
+### Minor Changes
+
+- [`54ba0f716`](https://github.com/Shopify/polaris/commit/54ba0f716088ae36e7fae08d2768d2541b9107b6) Thanks [@alex-page](https://github.com/alex-page)! - Added id to the metadata value to reduce need to transform objects
+
+* [#6484](https://github.com/Shopify/polaris/pull/6484) [`9269e5ee6`](https://github.com/Shopify/polaris/commit/9269e5ee62171cf7b8ced1b9edef68da3bcd9dd2) Thanks [@martenbjork](https://github.com/martenbjork)! - Change icon names to start with an uppercase
+
 ## 4.23.0
 
 ### Minor Changes

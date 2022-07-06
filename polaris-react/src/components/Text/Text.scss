@@ -111,3 +111,24 @@
   font-size: var(--p-font-size-5);
   line-height: var(--p-line-height-3);
 }
+
+.code {
+  position: relative;
+  background-color: var(--p-surface-subdued);
+  border-radius: var(--p-border-radius-base);
+  box-shadow: inset 0 0 0 1px var(--p-border-subdued);
+  display: inline-block;
+  font-size: var(--p-font-size-5);
+  padding: 0 var(--p-space-1);
+
+  &::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    border: var(--p-border-width-1) solid transparent;
+    pointer-events: none;
+  }
+}
